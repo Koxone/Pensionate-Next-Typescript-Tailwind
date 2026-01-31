@@ -1,0 +1,271 @@
+/* Icons - Estilos de iconos */
+
+/* Icon Base */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Icon Sizes */
+.icon-xs {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-sm {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-md {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-lg {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-xl {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-2xl {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-3xl {
+  width: 64px;
+  height: 64px;
+}
+
+/* Icon Colors */
+.icon-primary {
+  color: var(--color-primary);
+}
+
+.icon-secondary {
+  color: var(--color-secondary);
+}
+
+.icon-white {
+  color: var(--color-white);
+}
+
+.icon-muted {
+  color: var(--color-gray-400);
+}
+
+.icon-success {
+  color: var(--color-success);
+}
+
+.icon-warning {
+  color: var(--color-warning);
+}
+
+.icon-error {
+  color: var(--color-error);
+}
+
+/* Icon Container */
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-full);
+}
+
+.icon-container-sm {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-container-md {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-container-lg {
+  width: 64px;
+  height: 64px;
+}
+
+.icon-container-xl {
+  width: 80px;
+  height: 80px;
+}
+
+/* Icon Container Variants */
+.icon-container-primary {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary);
+}
+
+.icon-container-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-gray-900);
+}
+
+.icon-container-light {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-600);
+}
+
+.icon-container-white {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.icon-container-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-gray-200);
+  color: var(--color-gray-600);
+}
+
+.icon-container-outline-primary {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Icon with Text */
+.icon-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.icon-text-lg {
+  gap: var(--spacing-3);
+}
+
+/* Animated Icons */
+.icon-spin {
+  animation: icon-spin 1s linear infinite;
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-pulse {
+  animation: icon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes icon-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.icon-bounce {
+  animation: icon-bounce 1s ease infinite;
+}
+
+@keyframes icon-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-600);
+  transition: all var(--transition-fast);
+}
+
+.social-icon:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Feature Icon */
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius-xl);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+.feature-icon-lg {
+  width: 80px;
+  height: 80px;
+}
+
+/* Step Icon */
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.step-icon-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.step-icon-completed {
+  background-color: var(--color-success);
+}
+
+/* Check Icon */
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-success);
+  color: var(--color-white);
+}
+
+.check-icon-lg {
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,179 @@
+/* Accordion - Estilos de acordeón para FAQ */
+
+/* Accordion Container */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+/* Accordion Item */
+.accordion-item {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.accordion-item:hover {
+  border-color: var(--color-gray-300);
+}
+
+.accordion-item-active {
+  border-color: var(--color-primary-200);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Accordion Header */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-5) var(--spacing-6);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.accordion-header:hover {
+  background-color: var(--color-gray-50);
+}
+
+.accordion-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-900);
+  padding-right: var(--spacing-4);
+}
+
+.accordion-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-gray-500);
+  transition: transform var(--transition-base);
+}
+
+.accordion-item-active .accordion-icon {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+/* Accordion Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow);
+}
+
+.accordion-item-active .accordion-content {
+  max-height: 500px;
+}
+
+.accordion-body {
+  padding: 0 var(--spacing-6) var(--spacing-5);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Accordion Variants */
+
+/* Bordered Accordion */
+.accordion-bordered .accordion-item {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.accordion-bordered .accordion-item:first-child {
+  border-top: 1px solid var(--color-gray-200);
+}
+
+/* Flush Accordion */
+.accordion-flush .accordion-item {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.accordion-flush .accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* Card Accordion */
+.accordion-card .accordion-item {
+  box-shadow: var(--shadow-sm);
+  border: none;
+}
+
+.accordion-card .accordion-item-active {
+  box-shadow: var(--shadow-md);
+}
+
+/* Minimal Accordion */
+.accordion-minimal .accordion-item {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-minimal .accordion-header {
+  padding: var(--spacing-4) 0;
+}
+
+.accordion-minimal .accordion-body {
+  padding: 0 0 var(--spacing-4);
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-category {
+  margin-bottom: var(--spacing-8);
+}
+
+.faq-category-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+}
+
+/* Accordion with Number */
+.accordion-numbered .accordion-header {
+  counter-increment: accordion-counter;
+}
+
+.accordion-numbered .accordion-title::before {
+  content: counter(accordion-counter) '. ';
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.accordion-numbered {
+  counter-reset: accordion-counter;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .accordion-header {
+    padding: var(--spacing-4);
+  }
+
+  .accordion-body {
+    padding: 0 var(--spacing-4) var(--spacing-4);
+  }
+
+  .accordion-title {
+    font-size: var(--font-size-sm);
+  }
+}
