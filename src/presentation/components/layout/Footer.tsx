@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useRouter } from 'next/navigation';
-import { 
-  PhoneIcon, 
-  MailIcon, 
-  MapPinIcon, 
-  FacebookIcon, 
-  TwitterIcon, 
-  LinkedInIcon, 
-  InstagramIcon 
-} from '../ui/Icons';
-import { footerNavigation, contactInfo } from '@infrastructure/data/mockData';
+import React from "react";
+import { useRouter } from "next/navigation";
+import {
+  PhoneIcon,
+  MailIcon,
+  MapPinIcon,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedInIcon,
+  InstagramIcon,
+} from "../ui/Icons";
+import { footerNavigation, contactInfo } from "@infrastructure/data/mockData";
 
 export const Footer: React.FC = () => {
   const router = useRouter();
@@ -28,11 +28,12 @@ export const Footer: React.FC = () => {
         <div className="footer-cta">
           <h3 className="footer-cta-title">¿Listo para asegurar tu futuro?</h3>
           <p className="footer-cta-description">
-            Agenda una consulta gratuita con nuestros expertos y comienza a planificar tu retiro hoy.
+            Agenda una consulta gratuita con nuestros expertos y comienza a
+            planificar tu retiro hoy.
           </p>
-          <button 
+          <button
             className="btn btn-white"
-            onClick={() => handleNavigation('/contacto')}
+            onClick={() => handleNavigation("/contacto")}
           >
             Agenda tu Cita Gratis
           </button>
@@ -42,23 +43,28 @@ export const Footer: React.FC = () => {
         <div className="footer-grid">
           {/* Brand Column */}
           <div className="footer-brand">
-            <div 
-              className="footer-logo cursor-pointer" 
-              onClick={() => handleNavigation('/')}
+            <div
+              className="footer-logo cursor-pointer"
+              onClick={() => handleNavigation("/")}
             >
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="16" r="14" fill="currentColor" />
-                <path d="M16 8v8l6 3" stroke="#0052CC" strokeWidth="2" strokeLinecap="round" />
+                <path
+                  d="M16 8v8l6 3"
+                  stroke="#0052CC"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               </svg>
-              <span>PensionPlus</span>
+              <span>Pensionate.org</span>
             </div>
             <p className="footer-description">
-              Tu aliado experto en pensiones y planificación del retiro. 
-              Te ayudamos a construir el futuro financiero que mereces.
+              Tu aliado experto en pensiones y planificación del retiro. Te
+              ayudamos a construir el futuro financiero que mereces.
             </p>
             <div className="footer-social">
-              <a 
-                href={contactInfo.social.facebook} 
+              <a
+                href={contactInfo.social.facebook}
                 className="footer-social-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -66,8 +72,8 @@ export const Footer: React.FC = () => {
               >
                 <FacebookIcon size={18} />
               </a>
-              <a 
-                href={contactInfo.social.twitter} 
+              <a
+                href={contactInfo.social.twitter}
                 className="footer-social-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -75,8 +81,8 @@ export const Footer: React.FC = () => {
               >
                 <TwitterIcon size={18} />
               </a>
-              <a 
-                href={contactInfo.social.linkedin} 
+              <a
+                href={contactInfo.social.linkedin}
                 className="footer-social-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,8 +90,8 @@ export const Footer: React.FC = () => {
               >
                 <LinkedInIcon size={18} />
               </a>
-              <a 
-                href={contactInfo.social.instagram} 
+              <a
+                href={contactInfo.social.instagram}
                 className="footer-social-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -151,7 +157,7 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © {currentYear} PensionPlus. Todos los derechos reservados.
+            © {currentYear} Pensionate.org. Todos los derechos reservados.
           </p>
           <div className="footer-legal">
             {footerNavigation.legal.map((item) => (

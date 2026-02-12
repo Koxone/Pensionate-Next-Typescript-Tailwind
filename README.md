@@ -1,4 +1,4 @@
-# PensionPlus - Aplicación de Pensiones
+# Pensionate.org - Aplicación de Pensiones
 
 Aplicación web para una empresa de asesoría en pensiones, desarrollada con Next.js 15, React 19, TypeScript, y Tailwind CSS 4, siguiendo arquitectura limpia DDD (Domain-Driven Design).
 
@@ -62,20 +62,20 @@ La aplicación estará disponible en `http://localhost:3000`
 
 ## Páginas Disponibles
 
-| Ruta | Descripción |
-|------|-------------|
-| `/` | Página principal |
-| `/servicios` | Lista de servicios |
-| `/servicios/[slug]` | Detalle de servicio |
-| `/plan-retiro` | Plan Personal de Retiro |
-| `/calculadora` | Calculadora de pensión |
-| `/nosotros` | Sobre la empresa |
-| `/blog` | Lista de artículos |
-| `/blog/[slug]` | Detalle de artículo |
-| `/contacto` | Formulario de contacto |
-| `/faq` | Preguntas frecuentes |
-| `/privacidad` | Aviso de privacidad |
-| `/terminos` | Términos y condiciones |
+| Ruta                | Descripción             |
+| ------------------- | ----------------------- |
+| `/`                 | Página principal        |
+| `/servicios`        | Lista de servicios      |
+| `/servicios/[slug]` | Detalle de servicio     |
+| `/plan-retiro`      | Plan Personal de Retiro |
+| `/calculadora`      | Calculadora de pensión  |
+| `/nosotros`         | Sobre la empresa        |
+| `/blog`             | Lista de artículos      |
+| `/blog/[slug]`      | Detalle de artículo     |
+| `/contacto`         | Formulario de contacto  |
+| `/faq`              | Preguntas frecuentes    |
+| `/privacidad`       | Aviso de privacidad     |
+| `/terminos`         | Términos y condiciones  |
 
 ## Características
 
