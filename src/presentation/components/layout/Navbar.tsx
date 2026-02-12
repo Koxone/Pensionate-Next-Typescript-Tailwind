@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-import { MenuIcon, CloseIcon } from '../ui/Icons';
-import { Button } from '../ui/Button';
-import { mainNavigation } from '@infrastructure/data/mockData';
+import React, { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import { MenuIcon, CloseIcon } from "../ui/Icons";
+import { Button } from "../ui/Button";
+import { mainNavigation } from "@infrastructure/data/mockData";
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
@@ -17,8 +17,8 @@ export const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -32,18 +32,18 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+      <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
         <div className="navbar-container">
           {/* Logo */}
-          <div 
-            className="navbar-logo cursor-pointer" 
-            onClick={() => handleNavigation('/')}
+          <div
+            className="navbar-logo max-w-[300px] cursor-pointer object-contain"
+            onClick={() => handleNavigation("/")}
           >
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="14" fill="currentColor" />
-              <path d="M16 8v8l6 3" stroke="white" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-            <span>PensionPlus</span>
+            <img
+              className="object-cover"
+              src="/logo.webp"
+              alt="Pensionate Logo"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -51,7 +51,7 @@ export const Navbar: React.FC = () => {
             {mainNavigation.map((item) => (
               <button
                 key={item.href}
-                className={`navbar-link ${pathname === item.href ? 'navbar-link-active' : ''}`}
+                className={`navbar-link ${pathname === item.href ? "navbar-link-active" : ""}`}
                 onClick={() => handleNavigation(item.href)}
               >
                 {item.label}
@@ -61,34 +61,40 @@ export const Navbar: React.FC = () => {
 
           {/* Actions */}
           <div className="navbar-actions">
-            <Button 
-              variant="primary" 
+            <Button
+              variant="primary"
               size="sm"
               href="/contacto"
               className="hidden lg:inline-flex"
             >
               Agenda tu Cita
             </Button>
-            
+
             {/* Mobile Menu Toggle */}
-            <button 
+            <button
               className="navbar-toggle"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <CloseIcon size={24} /> : <MenuIcon size={24} />}
+              {isMobileMenuOpen ? (
+                <CloseIcon size={24} />
+              ) : (
+                <MenuIcon size={24} />
+              )}
             </button>
           </div>
         </div>
       </nav>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+      <div
+        className={`mobile-menu ${isMobileMenuOpen ? "mobile-menu-open" : ""}`}
+      >
         <div className="mobile-menu-nav">
           {mainNavigation.map((item) => (
             <button
               key={item.href}
-              className={`mobile-menu-link ${pathname === item.href ? 'mobile-menu-link-active' : ''}`}
+              className={`mobile-menu-link ${pathname === item.href ? "mobile-menu-link-active" : ""}`}
               onClick={() => handleNavigation(item.href)}
             >
               {item.label}
@@ -96,11 +102,7 @@ export const Navbar: React.FC = () => {
           ))}
         </div>
         <div className="mobile-menu-divider" />
-        <Button 
-          variant="primary" 
-          fullWidth
-          href="/contacto"
-        >
+        <Button variant="primary" fullWidth href="/contacto">
           Agenda tu Cita
         </Button>
       </div>
