@@ -3,9 +3,16 @@
 import { useState } from 'react';
 import { Layout } from '@presentation/components/layout';
 import { Button } from '@presentation/components/ui/Button';
-import { Icon, PhoneIcon, MailIcon, MapPinIcon, ClockIcon } from '@presentation/components/ui/Icons';
+import {
+  Icon,
+  PhoneIcon,
+  MailIcon,
+  MapPinIcon,
+  ClockIcon,
+} from '@presentation/components/ui/Icons';
 import { FAQSection } from '@presentation/components/sections';
 import { contactInfo } from '@infrastructure/data/mockData';
+import { WhatsappIcon } from '../../presentation/components/ui/Icons';
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -13,16 +20,18 @@ export default function ContactoPage() {
     email: '',
     telefono: '',
     servicio: '',
-    mensaje: ''
+    mensaje: '',
   });
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -41,7 +50,8 @@ export default function ContactoPage() {
             <span className="hero-overline">Contacto</span>
             <h1 className="hero-title">Estamos aquí para ayudarte</h1>
             <p className="hero-subtitle">
-              Agenda una consulta gratuita o envíanos tus dudas. Nuestro equipo te responderá a la brevedad.
+              Agenda una consulta gratuita o envíanos tus dudas. Nuestro equipo te responderá a la
+              brevedad.
             </p>
           </div>
         </div>
@@ -54,21 +64,18 @@ export default function ContactoPage() {
             {/* Contact Form */}
             <div>
               <h2 className="heading-3 mb-6">Envíanos un mensaje</h2>
-              
+
               {submitted ? (
                 <div className="card card-elevated p-8 text-center">
-                  <div className="feature-icon feature-icon-lg mx-auto mb-4 bg-success-light">
+                  <div className="feature-icon feature-icon-lg bg-success-light mx-auto mb-4">
                     <Icon name="check-circle" size={32} className="text-success" />
                   </div>
                   <h3 className="heading-4 mb-2">¡Mensaje enviado!</h3>
                   <p className="text-body mb-6">
-                    Gracias por contactarnos. Un asesor se pondrá en contacto contigo 
-                    en las próximas 24 horas hábiles.
+                    Gracias por contactarnos. Un asesor se pondrá en contacto contigo en las
+                    próximas 24 horas hábiles.
                   </p>
-                  <Button 
-                    variant="outline"
-                    onClick={() => setSubmitted(false)}
-                  >
+                  <Button variant="outline" onClick={() => setSubmitted(false)}>
                     Enviar otro mensaje
                   </Button>
                 </div>
@@ -108,7 +115,7 @@ export default function ContactoPage() {
                         value={formData.telefono}
                         onChange={handleInputChange}
                         className="form-input"
-                        placeholder="55 1234 5678"
+                        placeholder="55 3750 7499"
                       />
                     </div>
                   </div>
@@ -145,15 +152,13 @@ export default function ContactoPage() {
                   </div>
 
                   <div className="form-check">
-                    <input
-                      type="checkbox"
-                      id="privacidad"
-                      className="form-check-input"
-                      required
-                    />
+                    <input type="checkbox" id="privacidad" className="form-check-input" required />
                     <label htmlFor="privacidad" className="form-check-label">
-                      Acepto el <a href="/privacidad" className="text-link">Aviso de Privacidad</a> y 
-                      autorizo el tratamiento de mis datos personales.
+                      Acepto el{' '}
+                      <a href="/privacidad" className="text-link">
+                        Aviso de Privacidad
+                      </a>{' '}
+                      y autorizo el tratamiento de mis datos personales.
                     </label>
                   </div>
 
@@ -167,20 +172,26 @@ export default function ContactoPage() {
             {/* Contact Info */}
             <div>
               <h2 className="heading-3 mb-6">Información de contacto</h2>
-              
-              <div className="space-y-6 mb-8">
-                <div className="card card-bordered p-5 flex items-start gap-4">
+
+              <div className="mb-8 flex flex-col gap-4">
+                <a
+                  href="https://wa.me/5215537507499"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card card-bordered flex items-start gap-4 p-5 transition hover:shadow-md"
+                >
                   <div className="icon-container icon-container-md icon-container-primary">
-                    <PhoneIcon size={20} />
+                    <WhatsappIcon size={28} />
                   </div>
+
                   <div>
                     <h3 className="heading-6 mb-1">Teléfono</h3>
                     <p className="text-body">{contactInfo.phone}</p>
                     <p className="text-body-sm text-muted">Llamadas y WhatsApp</p>
                   </div>
-                </div>
+                </a>
 
-                <div className="card card-bordered p-5 flex items-start gap-4">
+                <div className="card card-bordered flex items-start gap-4 p-5">
                   <div className="icon-container icon-container-md icon-container-primary">
                     <MailIcon size={20} />
                   </div>
@@ -191,7 +202,7 @@ export default function ContactoPage() {
                   </div>
                 </div>
 
-                <div className="card card-bordered p-5 flex items-start gap-4">
+                <div className="card card-bordered flex items-start gap-4 p-5">
                   <div className="icon-container icon-container-md icon-container-primary">
                     <MapPinIcon size={20} />
                   </div>
@@ -202,7 +213,7 @@ export default function ContactoPage() {
                   </div>
                 </div>
 
-                <div className="card card-bordered p-5 flex items-start gap-4">
+                <div className="card card-bordered flex items-start gap-4 p-5">
                   <div className="icon-container icon-container-md icon-container-primary">
                     <ClockIcon size={20} />
                   </div>
@@ -216,9 +227,9 @@ export default function ContactoPage() {
 
               {/* Map placeholder */}
               <div className="card card-bordered overflow-hidden">
-                <div className="bg-gray-100 h-64 flex items-center justify-center">
+                <div className="flex h-64 items-center justify-center bg-gray-100">
                   <div className="text-center">
-                    <MapPinIcon size={48} className="text-gray-300 mx-auto mb-2" />
+                    <MapPinIcon size={48} className="mx-auto mb-2 text-gray-300" />
                     <p className="text-body-sm text-muted">Mapa de ubicación</p>
                   </div>
                 </div>
@@ -228,7 +239,7 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <FAQSection 
+      <FAQSection
         title="Preguntas frecuentes"
         subtitle="Encuentra respuestas a las dudas más comunes."
         limit={4}

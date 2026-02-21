@@ -16,12 +16,11 @@ export default function FAQPage() {
     { id: 'issste', name: 'ISSSTE' },
     { id: 'fiscal', name: 'Fiscal' },
     { id: 'inversion', name: 'Inversión' },
-    { id: 'retiros', name: 'Retiros' }
+    { id: 'retiros', name: 'Retiros' },
   ];
 
-  const filteredFaqs = activeCategory === 'all' 
-    ? faqs 
-    : faqs.filter(faq => faq.category === activeCategory);
+  const filteredFaqs =
+    activeCategory === 'all' ? faqs : faqs.filter((faq) => faq.category === activeCategory);
 
   return (
     <Layout>
@@ -32,7 +31,8 @@ export default function FAQPage() {
             <span className="hero-overline">Ayuda</span>
             <h1 className="hero-title">Preguntas Frecuentes</h1>
             <p className="hero-subtitle">
-              Encuentra respuestas a las dudas más comunes sobre pensiones, ahorro y nuestros servicios.
+              Encuentra respuestas a las dudas más comunes sobre pensiones, ahorro y nuestros
+              servicios.
             </p>
           </div>
         </div>
@@ -41,14 +41,14 @@ export default function FAQPage() {
       {/* FAQ Section */}
       <section className="section section-white">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
+          <div className="mx-auto max-w-4xl">
             {/* Category Tabs */}
-            <div className="flex flex-wrap gap-2 mb-8 justify-center">
+            <div className="mb-8 flex flex-wrap justify-center gap-2">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
                     activeCategory === category.id
                       ? 'bg-primary text-white'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -60,17 +60,11 @@ export default function FAQPage() {
             </div>
 
             {/* FAQ List */}
-            <Accordion 
-              items={filteredFaqs}
-              variant="card"
-              allowMultiple
-            />
+            <Accordion items={filteredFaqs} variant="card" allowMultiple />
 
             {filteredFaqs.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-body text-muted">
-                  No hay preguntas en esta categoría.
-                </p>
+              <div className="py-12 text-center">
+                <p className="text-body text-muted">No hay preguntas en esta categoría.</p>
               </div>
             )}
           </div>
@@ -80,7 +74,7 @@ export default function FAQPage() {
       {/* Contact CTA */}
       <section className="section section-light">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="mx-auto max-w-2xl text-center">
             <h2 className="heading-3 mb-4">¿No encontraste lo que buscabas?</h2>
             <p className="text-body-lg mb-6">
               Nuestro equipo de asesores está listo para resolver cualquier duda que tengas.
@@ -97,7 +91,7 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <CTASection 
+      <CTASection
         title="¿Listo para asegurar tu futuro?"
         subtitle="Agenda una consulta gratuita y comienza a planificar tu retiro."
         primaryCta={{ label: 'Agenda tu Cita', href: '/contacto' }}
@@ -107,5 +101,5 @@ export default function FAQPage() {
 }
 
 const contactInfo = {
-  phone: '55 1234 5678'
+  phone: '55 3750 7499',
 };
