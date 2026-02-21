@@ -58,7 +58,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section className="hero hero-gradient hero-lg">
-      <div className="mx-auto flex flex-col items-center">
+      <div className="mx-auto flex flex-col items-center px-4">
         <span className="hero-overline">Expertos en Pensiones</span>
         <h1 className="hero-title text-center">{title}</h1>
         <p className="hero-subtitle text-center">{subtitle}</p>
