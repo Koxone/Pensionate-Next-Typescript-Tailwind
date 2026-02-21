@@ -1,7 +1,5 @@
-// Mock Data - Datos de prueba para la aplicación
-
-import type { PensionPlan, PensionPlanDetails } from '@domain/entities/PensionPlan';
-import type { Service, ServiceDetails } from '@domain/entities/Service';
+import type { PensionPlan } from '@domain/entities/PensionPlan';
+import type { Service } from '@domain/entities/Service';
 import type { Testimonial } from '@domain/entities/Testimonial';
 import type { FAQ } from '@domain/entities/FAQ';
 import type { Statistic } from '@domain/entities/Statistic';

@@ -58,180 +58,60 @@ export default function ContactoPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="section section-white">
+      <section className="section-white">
         <div className="container">
-          <div className="grid grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <h2 className="heading-3 mb-6">Envíanos un mensaje</h2>
+          {/* Contact Info */}
+          <div>
+            <h2 className="heading-3 mb-6">Información de contacto</h2>
 
-              {submitted ? (
-                <div className="card card-elevated p-8 text-center">
-                  <div className="feature-icon feature-icon-lg bg-success-light mx-auto mb-4">
-                    <Icon name="check-circle" size={32} className="text-success" />
-                  </div>
-                  <h3 className="heading-4 mb-2">¡Mensaje enviado!</h3>
-                  <p className="text-body mb-6">
-                    Gracias por contactarnos. Un asesor se pondrá en contacto contigo en las
-                    próximas 24 horas hábiles.
-                  </p>
-                  <Button variant="outline" onClick={() => setSubmitted(false)}>
-                    Enviar otro mensaje
-                  </Button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="form-group">
-                    <label className="form-label form-label-required">Nombre completo</label>
-                    <input
-                      type="text"
-                      name="nombre"
-                      value={formData.nombre}
-                      onChange={handleInputChange}
-                      className="form-input"
-                      placeholder="Tu nombre"
-                      required
-                    />
-                  </div>
-
-                  <div className="form-row form-row-2">
-                    <div className="form-group">
-                      <label className="form-label form-label-required">Correo electrónico</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        placeholder="tu@email.com"
-                        required
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label className="form-label">Teléfono</label>
-                      <input
-                        type="tel"
-                        name="telefono"
-                        value={formData.telefono}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        placeholder="55 3750 7499"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label className="form-label">Servicio de interés</label>
-                    <select
-                      name="servicio"
-                      value={formData.servicio}
-                      onChange={handleInputChange}
-                      className="form-input form-select"
-                    >
-                      <option value="">Selecciona un servicio</option>
-                      <option value="asesoria-imss">Asesoría en Pensiones IMSS</option>
-                      <option value="asesoria-issste">Asesoría en Pensiones ISSSTE</option>
-                      <option value="plan-retiro">Plan Personal de Retiro</option>
-                      <option value="gestion-tramites">Gestión de Trámites</option>
-                      <option value="calculo-pension">Cálculo de Pensión</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                  </div>
-
-                  <div className="form-group">
-                    <label className="form-label form-label-required">Mensaje</label>
-                    <textarea
-                      name="mensaje"
-                      value={formData.mensaje}
-                      onChange={handleInputChange}
-                      className="form-input form-textarea"
-                      placeholder="Cuéntanos cómo podemos ayudarte..."
-                      rows={5}
-                      required
-                    />
-                  </div>
-
-                  <div className="form-check">
-                    <input type="checkbox" id="privacidad" className="form-check-input" required />
-                    <label htmlFor="privacidad" className="form-check-label">
-                      Acepto el{' '}
-                      <a href="/privacidad" className="text-link">
-                        Aviso de Privacidad
-                      </a>{' '}
-                      y autorizo el tratamiento de mis datos personales.
-                    </label>
-                  </div>
-
-                  <Button type="submit" variant="primary" size="lg" fullWidth>
-                    Enviar Mensaje
-                  </Button>
-                </form>
-              )}
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h2 className="heading-3 mb-6">Información de contacto</h2>
-
-              <div className="mb-8 flex flex-col gap-4">
-                <a
-                  href="https://wa.me/5215537507499"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="card card-bordered flex items-start gap-4 p-5 transition hover:shadow-md"
-                >
-                  <div className="icon-container icon-container-md icon-container-primary">
-                    <WhatsappIcon size={28} />
-                  </div>
-
-                  <div>
-                    <h3 className="heading-6 mb-1">Teléfono</h3>
-                    <p className="text-body">{contactInfo.phone}</p>
-                    <p className="text-body-sm text-muted">Llamadas y WhatsApp</p>
-                  </div>
-                </a>
-
-                <div className="card card-bordered flex items-start gap-4 p-5">
-                  <div className="icon-container icon-container-md icon-container-primary">
-                    <MailIcon size={20} />
-                  </div>
-                  <div>
-                    <h3 className="heading-6 mb-1">Correo electrónico</h3>
-                    <p className="text-body">{contactInfo.email}</p>
-                    <p className="text-body-sm text-muted">Respuesta en 24 horas</p>
-                  </div>
+            <div className="mb-8 flex flex-col gap-4">
+              <a
+                href="https://wa.me/5215537507499"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card card-bordered flex items-start gap-4 p-5 transition hover:shadow-md"
+              >
+                <div className="icon-container icon-container-md icon-container-primary">
+                  <WhatsappIcon size={28} />
                 </div>
 
-                <div className="card card-bordered flex items-start gap-4 p-5">
-                  <div className="icon-container icon-container-md icon-container-primary">
-                    <MapPinIcon size={20} />
-                  </div>
-                  <div>
-                    <h3 className="heading-6 mb-1">Oficinas</h3>
-                    <p className="text-body">{contactInfo.address}</p>
-                    <p className="text-body-sm text-muted">Ciudad de México</p>
-                  </div>
+                <div>
+                  <h3 className="heading-6 mb-1">Teléfono</h3>
+                  <p className="text-body">{contactInfo.phone}</p>
+                  <p className="text-body-sm text-muted">Llamadas y WhatsApp</p>
                 </div>
+              </a>
 
-                <div className="card card-bordered flex items-start gap-4 p-5">
-                  <div className="icon-container icon-container-md icon-container-primary">
-                    <ClockIcon size={20} />
-                  </div>
-                  <div>
-                    <h3 className="heading-6 mb-1">Horario de atención</h3>
-                    <p className="text-body">{contactInfo.schedule}</p>
-                    <p className="text-body-sm text-muted">Hora del centro de México</p>
-                  </div>
+              <div className="card card-bordered flex items-start gap-4 p-5">
+                <div className="icon-container icon-container-md icon-container-primary">
+                  <MailIcon size={20} />
+                </div>
+                <div>
+                  <h3 className="heading-6 mb-1">Correo electrónico</h3>
+                  <p className="text-body">{contactInfo.email}</p>
+                  <p className="text-body-sm text-muted">Respuesta en 24 horas</p>
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="card card-bordered overflow-hidden">
-                <div className="flex h-64 items-center justify-center bg-gray-100">
-                  <div className="text-center">
-                    <MapPinIcon size={48} className="mx-auto mb-2 text-gray-300" />
-                    <p className="text-body-sm text-muted">Mapa de ubicación</p>
-                  </div>
+              <div className="card card-bordered flex items-start gap-4 p-5">
+                <div className="icon-container icon-container-md icon-container-primary">
+                  <MapPinIcon size={20} />
+                </div>
+                <div>
+                  <h3 className="heading-6 mb-1">Oficinas</h3>
+                  <p className="text-body">{contactInfo.address}</p>
+                  <p className="text-body-sm text-muted">Ciudad de México</p>
+                </div>
+              </div>
+
+              <div className="card card-bordered flex items-start gap-4 p-5">
+                <div className="icon-container icon-container-md icon-container-primary">
+                  <ClockIcon size={20} />
+                </div>
+                <div>
+                  <h3 className="heading-6 mb-1">Horario de atención</h3>
+                  <p className="text-body">{contactInfo.schedule}</p>
+                  <p className="text-body-sm text-muted">Hora del centro de México</p>
                 </div>
               </div>
             </div>

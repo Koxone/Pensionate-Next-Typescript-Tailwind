@@ -47,16 +47,11 @@ export const Footer: React.FC = () => {
               className="footer-logo cursor-pointer"
               onClick={() => handleNavigation("/")}
             >
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <circle cx="16" cy="16" r="14" fill="currentColor" />
-                <path
-                  d="M16 8v8l6 3"
-                  stroke="#0052CC"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <span>Pensionate.org</span>
+               <img
+              className="object-cover"
+              src="/logo-small-white.svg"
+              alt="Pensionate Logo"
+            />
             </div>
             <p className="footer-description">
               Tu aliado experto en pensiones y planificación del retiro. Te
