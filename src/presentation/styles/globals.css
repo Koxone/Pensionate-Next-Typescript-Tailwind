@@ -25,3 +25,12 @@
 /* Utility Styles */
 @import "./utils/_utilities.css";
 @import "./utils/_animations.css";
+/* Global hide scrollbar */
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
