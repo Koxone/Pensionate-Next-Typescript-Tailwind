@@ -21,7 +21,7 @@ export default function PlanRetiroPage() {
       <section className="hero hero-gradient hero-lg">
         <div className="hero-container">
           <div className="hero-grid">
-            <div className="hero-content">
+            <div className="hero-content px-4">
               <span className="hero-overline">Plan Personal de Retiro</span>
               <h1 className="hero-title">
                 Ahorra para tu futuro y deduce impuestos
