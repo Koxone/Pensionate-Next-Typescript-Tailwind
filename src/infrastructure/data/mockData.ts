@@ -354,7 +354,7 @@ export const mainNavigation = [
   { label: 'Inicio', href: '/' },
   { label: 'Servicios', href: '/servicios' },
   { label: 'Plan de Retiro', href: '/plan-retiro' },
-  { label: 'Calculadora', href: '/calculadora' },
+  // { label: 'Calculadora', href: '/calculadora' },
   { label: 'Nosotros', href: '/nosotros' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contacto', href: '/contacto' },
