@@ -209,17 +209,17 @@ export const faqs: FAQ[] = [
 export const statistics: Statistic[] = [
   {
     id: '1',
-    value: '200,000',
+    value: '1000',
     label: 'Clientes satisfechos',
     prefix: '+',
     suffix: '',
   },
   {
     id: '2',
-    value: '1,800',
+    value: '1.8',
     label: 'Millones de dólares administrados',
     prefix: '$',
-    suffix: ' MDD',
+    suffix: ' MDP',
   },
   {
     id: '3',
@@ -353,7 +353,7 @@ export const contactInfo = {
 export const mainNavigation = [
   { label: 'Inicio', href: '/' },
   { label: 'Servicios', href: '/servicios' },
-  { label: 'Plan de Retiro', href: '/plan-retiro' },
+  // { label: 'Plan de Retiro', href: '/plan-retiro' },
   // { label: 'Calculadora', href: '/calculadora' },
   { label: 'Nosotros', href: '/nosotros' },
   { label: 'Blog', href: '/blog' },
