@@ -217,7 +217,7 @@ export const statistics: Statistic[] = [
   {
     id: '2',
     value: '1.8',
-    label: 'Millones de dólares administrados',
+    label: 'Millones de pesos administrados',
     prefix: '$',
     suffix: ' MDP',
   },
