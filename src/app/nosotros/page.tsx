@@ -9,30 +9,31 @@ export default function NosotrosPage() {
     { name: 'Carlos Mendoza', role: 'Director General', initials: 'CM' },
     { name: 'María Fernández', role: 'Directora de Operaciones', initials: 'MF' },
     { name: 'Roberto García', role: 'Director Financiero', initials: 'RG' },
-    { name: 'Ana López', role: 'Directora de Asesoría', initials: 'AL' }
+    { name: 'Ana López', role: 'Directora de Asesoría', initials: 'AL' },
   ];
 
   const values = [
-    { 
-      title: 'Transparencia', 
+    {
+      title: 'Transparencia',
       description: 'Comunicamos de manera clara y honesta. Sin letra pequeña ni sorpresas.',
-      icon: 'eye'
+      icon: 'eye',
     },
-    { 
-      title: 'Compromiso', 
-      description: 'Tu futuro financiero es nuestra prioridad. Trabajamos para que alcances tus metas.',
-      icon: 'shield-check'
+    {
+      title: 'Compromiso',
+      description:
+        'Tu futuro financiero es nuestra prioridad. Trabajamos para que alcances tus metas.',
+      icon: 'shield-check',
     },
-    { 
-      title: 'Experiencia', 
+    {
+      title: 'Experiencia',
       description: 'Más de 15 años ayudando a mexicanos a planificar su retiro.',
-      icon: 'users'
+      icon: 'users',
     },
-    { 
-      title: 'Innovación', 
+    {
+      title: 'Innovación',
       description: 'Utilizamos tecnología de punta para ofrecerte el mejor servicio.',
-      icon: 'smartphone'
-    }
+      icon: 'smartphone',
+    },
   ];
 
   return (
@@ -43,34 +44,28 @@ export default function NosotrosPage() {
           <div className="hero-grid">
             <div className="hero-content">
               <span className="hero-overline">Sobre Nosotros</span>
-              <h1 className="hero-title">
-                Tu aliado experto en pensiones
-              </h1>
+              <h1 className="hero-title">Tu aliado experto en pensiones</h1>
               <p className="hero-subtitle">
-                Somos una empresa mexicana dedicada a ayudar a las personas a planificar 
-                y asegurar su futuro financiero. Con más de 15 años de experiencia, 
-                hemos ayudado a miles de familias a alcanzar la tranquilidad que merecen.
+                Somos una empresa mexicana dedicada a ayudar a las personas a planificar y asegurar
+                su futuro financiero. Con más de 15 años de experiencia, hemos ayudado a miles de
+                familias a alcanzar la tranquilidad que merecen.
               </p>
             </div>
-            
+
             <div className="hero-image">
               <div className="card card-elevated p-8">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-primary-50 rounded-lg">
-                    <p className="text-3xl font-bold text-primary">+200K</p>
+                  <div className="bg-primary-50 rounded-lg p-4 text-center">
+                    <p className="text-primary text-3xl font-bold">+1000</p>
                     <p className="text-body-sm">Clientes</p>
                   </div>
-                  <div className="text-center p-4 bg-primary-50 rounded-lg">
-                    <p className="text-3xl font-bold text-primary">15+</p>
+                  <div className="bg-primary-50 rounded-lg p-4 text-center">
+                    <p className="text-primary text-3xl font-bold">15+</p>
                     <p className="text-body-sm">Años</p>
                   </div>
-                  <div className="text-center p-4 bg-primary-50 rounded-lg">
-                    <p className="text-3xl font-bold text-primary">98%</p>
+                  <div className="bg-primary-50 col-span-2 rounded-lg p-4 text-center">
+                    <p className="text-primary text-3xl font-bold">98%</p>
                     <p className="text-body-sm">Satisfacción</p>
-                  </div>
-                  <div className="text-center p-4 bg-primary-50 rounded-lg">
-                    <p className="text-3xl font-bold text-primary">$1.8B</p>
-                    <p className="text-body-sm">Administrados</p>
                   </div>
                 </div>
               </div>
@@ -87,8 +82,8 @@ export default function NosotrosPage() {
               <span className="section-overline">Nuestra Misión</span>
               <h2 className="heading-3 mb-4">Democratizar el acceso a la asesoría financiera</h2>
               <p className="text-body-lg">
-                Creemos que todos los mexicanos merecen acceso a asesoría financiera de calidad 
-                para planificar su retiro. Nuestra misión es hacer que este servicio sea accesible, 
+                Creemos que todos los mexicanos merecen acceso a asesoría financiera de calidad para
+                planificar su retiro. Nuestra misión es hacer que este servicio sea accesible,
                 comprensible y efectivo para todos.
               </p>
             </div>
@@ -96,8 +91,9 @@ export default function NosotrosPage() {
               <span className="section-overline">Nuestra Visión</span>
               <h2 className="heading-3 mb-4">Un México donde todos disfruten su retiro</h2>
               <p className="text-body-lg">
-                Visualizamos un país donde cada persona pueda retirarse con dignidad y tranquilidad 
-                financiera. Trabajamos cada día para hacer esta visión una realidad, un cliente a la vez.
+                Visualizamos un país donde cada persona pueda retirarse con dignidad y tranquilidad
+                financiera. Trabajamos cada día para hacer esta visión una realidad, un cliente a la
+                vez.
               </p>
             </div>
           </div>
@@ -143,8 +139,8 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-4 gap-6">
             {team.map((member, index) => (
               <div key={index} className="card card-bordered p-6 text-center">
-                <div className="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">{member.initials}</span>
+                <div className="bg-primary-50 mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full">
+                  <span className="text-primary text-2xl font-bold">{member.initials}</span>
                 </div>
                 <h3 className="heading-6 mb-1">{member.name}</h3>
                 <p className="text-body-sm text-muted">{member.role}</p>
@@ -165,7 +161,7 @@ export default function NosotrosPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="mx-auto max-w-3xl">
             <div className="grid grid-cols-3 gap-6">
               <div className="card card-bordered p-6 text-center">
                 <div className="feature-icon mx-auto">
@@ -179,14 +175,18 @@ export default function NosotrosPage() {
                   <Icon name="shield-check" size={24} />
                 </div>
                 <h3 className="heading-6 mb-2">CONSAR</h3>
-                <p className="text-body-xs text-muted">Comisión Nacional del Sistema de Ahorro para el Retiro</p>
+                <p className="text-body-xs text-muted">
+                  Comisión Nacional del Sistema de Ahorro para el Retiro
+                </p>
               </div>
               <div className="card card-bordered p-6 text-center">
                 <div className="feature-icon mx-auto">
                   <Icon name="shield-check" size={24} />
                 </div>
                 <h3 className="heading-6 mb-2">CONDUSEF</h3>
-                <p className="text-body-xs text-muted">Comisión Nacional para la Protección de Usuarios</p>
+                <p className="text-body-xs text-muted">
+                  Comisión Nacional para la Protección de Usuarios
+                </p>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function NosotrosPage() {
 
       <TestimonialsSection />
 
-      <CTASection 
+      <CTASection
         title="¿Quieres conocernos mejor?"
         subtitle="Agenda una cita y descubre cómo podemos ayudarte a planificar tu futuro."
         primaryCta={{ label: 'Agenda tu Cita', href: '/contacto' }}
